@@ -55,6 +55,10 @@
 
 ### UFSDxe:
 
+> [!TIP]
+> UFS will still enter Sleep State after Exit Boot Services. <br>
+> To prevent this, Set `UEFIExitUfsSSURequired` to `0` in the Configuration Map.
+
 - **Reason:** To allow the usage of UFS.
 - **Patch Nr. 1:** The UFS Sleep call has been Replaced with the UFS Wakeup Call.
 - **Patch Nr. 2:** Added UFS Link Wake Up.
