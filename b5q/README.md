@@ -23,6 +23,23 @@
 - **Patch:** The DCD Disable Dependencies Function Call has been Removed.
 - **Patch Creator:** [Gustave Monce](https://github.com/gus33000/)
 
+### DisplayDxe:
+
+> [!IMPORTANT]
+> This Patch requires `EnableDisplayThread` to be Disabled in the Configuration Map.
+
+- **Reason:** To get more Control over the Display in UEFI.
+- **Patch Nr. 1:** The IOMMU Domains have been Removed to avoid a Crash.
+- **Patch Nr. 2:** Qcom's Panel Reset Function has been removed to avoid turning off the Main Display.
+- **Patch Nr. 3:** Qcom's DSI Panel Init Function has been Modded to not turn off the Displays.
+- **Patch Nr. 4:** Samsung's Panel Reset Function has been Removed to avoid turning off the Displays.
+- **Patch Nr. 5:** A DSI Close Function call has been Removed to avoid turning off the Main Display.
+- **Patch Nr. 6:** Forced LPM Function Call to Unregister the Event instead of Registering it.
+- **Patch Nr. 7:** Modified Display Set Power State Protocol Function to not Deinit Clocks on Turn Off.
+- **Patch Nr. 8:** Modfifed Exit Boot Services Event to Only Turn off Cover Display instead of Both.
+- **Patch Nr. 9:** Removed a Broken Paint Command for the Main Display to Avoid Trash on the Display.
+- **Patch Creator:** [Gustave Monce](https://github.com/gus33000) & [Robotix22](https://github.com/Robotix22) & [Aistop](https://github.com/AistopGit)
+
 ### PmicDxe:
 
 > [!IMPORTANT]
